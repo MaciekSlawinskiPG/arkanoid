@@ -12,7 +12,6 @@ bool PlayGame::isCollide(pilka s1, blok s2)
 	if ((s1.getPos().x > s2.getPos().x) && (s1.getPos().x < ((s2.getPos().x) + 43)) && (s1.getPos().y > s2.getPos().y - 10) && (s1.getPos().y < (s2.getPos().y) + 20)) 
 	{ 
 		return true; 
-
 	}
 	else 
 	{ 
