@@ -1,0 +1,15 @@
+﻿  blok.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\blok.cpp(1,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  ChoiceLevelMenu.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\ChoiceLevelMenu.h(2,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  main.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\main.cpp(1,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  menu.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\menu.h(2,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  paletka.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\paletka.cpp(1,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  pilka.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\pilka.cpp(1,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  PlayGame.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\PlayGame.cpp(2,10): fatal error C1083: Nie można otworzyć pliku dołącz: 'SFML/Graphics.hpp': No such file or directory
+  Generowanie kodu...
