@@ -15,8 +15,8 @@ menu::menu(float width, float height)
 
 	menuItem[1].setFont(font);
 	menuItem[1].setFillColor(sf::Color::White);
-	menuItem[1].setString("Zasady gry");
-	menuItem[1].setPosition(sf::Vector2f(294, height / (NUMBER_OF_ITEMS + 1) * 2-20));
+	menuItem[1].setString("Ranking");
+	menuItem[1].setPosition(sf::Vector2f(330, height / (NUMBER_OF_ITEMS + 1) * 2-20));
 
 	menuItem[2].setFont(font);
 	menuItem[2].setFillColor(sf::Color::White);

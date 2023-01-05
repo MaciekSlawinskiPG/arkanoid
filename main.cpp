@@ -2,27 +2,27 @@
 #include <iostream>
 #include <cstdlib>
 #include "menu.h"
-#include "PlayGame.h"
+#include "GameLevels.h"
 #include "ChoiceLevelMenu.h"
 
 int main()
 {
 	sf::ContextSettings settings;
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Arkanoid game", sf::Style::Default, settings);
-	window.setFramerateLimit(60);
+	sf::RenderWindow MainWindow(sf::VideoMode(800, 600), "Arkanoid game", sf::Style::Default, settings);
+	MainWindow.setFramerateLimit(60);
 
-	menu menu(window.getSize().x, window.getSize().y);
-	ChoiceLevelMenu LevelMenu(window.getSize().x, window.getSize().y);
+	menu menu(MainWindow.getSize().x, MainWindow.getSize().y);
+	ChoiceLevelMenu LevelMenu(MainWindow.getSize().x, MainWindow.getSize().y);
 
-	while (window.isOpen())
+	while (MainWindow.isOpen())
 	{
 		sf::Event event;
-		while (window.pollEvent(event))
+		while (MainWindow.pollEvent(event))
 		{
 			switch (event.type)
 			{
 			case sf::Event::Closed:
-				window.close();
+				MainWindow.close();
 				break;
 
 			case sf::Event::KeyReleased:
@@ -45,18 +45,18 @@ int main()
 						break; 
 					}	
 					case 1:
-						std::cout << "Przedstawiam zasady gry..." << std::endl;
+						std::cout << "Uruchamiam ranking graczy..." << std::endl;
 						break;
 					case 2:
-						window.close();
+						MainWindow.close();
 						break;
 					}
 				}
 			}
 		}
-		window.clear();
-		menu.draw(window);
-		window.display();
+		MainWindow.clear();
+		menu.draw(MainWindow);
+		MainWindow.display();
 	}
 	return 0;
 }

@@ -3,10 +3,10 @@
 #include "pilka.h"
 #include "blok.h"
 
-class PlayGame
+class Level1
 {
 public:
-	PlayGame();
+	Level1();
 	bool isCollide(pilka s1, blok s2);
 
 };

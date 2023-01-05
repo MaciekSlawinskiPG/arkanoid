@@ -1,5 +1,5 @@
 #include "ChoiceLevelMenu.h"
-#include "PlayGame.h"
+#include "GameLevels.h"
 #include <iostream>
 
 #define MAX_ITEMS 6
@@ -88,20 +88,20 @@ void ChoiceLevelMenu::MoveDown()
 void ChoiceLevelMenu::RunChoiceLevelMenu()
 {
 	sf::ContextSettings settings;
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Arkanoid game", sf::Style::Default, settings);
-	window.setFramerateLimit(60);
+	sf::RenderWindow ChoiceLevelMenuWindow(sf::VideoMode(800, 600), "Arkanoid game", sf::Style::Default, settings);
+	ChoiceLevelMenuWindow.setFramerateLimit(60);
 
-	ChoiceLevelMenu LevelMenu(window.getSize().x, window.getSize().y);
+	ChoiceLevelMenu LevelMenu(ChoiceLevelMenuWindow.getSize().x, ChoiceLevelMenuWindow.getSize().y);
 
-	while (window.isOpen())
+	while (ChoiceLevelMenuWindow.isOpen())
 	{
 		sf::Event event;
-		while (window.pollEvent(event))
+		while (ChoiceLevelMenuWindow.pollEvent(event))
 		{
 			switch (event.type)
 			{
 			case sf::Event::Closed:
-				window.close();
+				ChoiceLevelMenuWindow.close();
 				break;
 
 			case sf::Event::KeyReleased:
@@ -120,7 +120,7 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 					{
 					case 0:
 					{
-						PlayGame game;
+						Level1 start;
 						break;
 					}
 					case 1:
@@ -136,14 +136,14 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 						std::cout << "Uruchamiam Poziom 5..." << std::endl;
 						break;
 					case 5:
-						window.close();
+						ChoiceLevelMenuWindow.close();
 						break;
 					}
 				}
 			}
 		}
-		window.clear();
-		LevelMenu.draw(window);
-		window.display();
+		ChoiceLevelMenuWindow.clear();
+		LevelMenu.draw(ChoiceLevelMenuWindow);
+		ChoiceLevelMenuWindow.display();
 	}
 }

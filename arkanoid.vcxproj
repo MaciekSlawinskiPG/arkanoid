@@ -148,7 +148,7 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="paletka.cpp" />
     <ClCompile Include="pilka.cpp" />
-    <ClCompile Include="PlayGame.cpp" />
+    <ClCompile Include="GameLevels.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blok.h" />
@@ -156,7 +156,7 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="paletka.h" />
     <ClInclude Include="pilka.h" />
-    <ClInclude Include="PlayGame.h" />
+    <ClInclude Include="GameLevels.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
