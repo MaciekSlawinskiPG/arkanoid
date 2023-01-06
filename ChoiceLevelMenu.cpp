@@ -120,21 +120,33 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 					{
 					case 0:
 					{
+						std::cout << "Uruchamiam Poziom 1..." << std::endl;
 						Level1 start;
 						break;
 					}
 					case 1:
+					{
 						std::cout << "Uruchamiam Poziom 2..." << std::endl;
-						break;
+						Level2 start;
+						break; }
 					case 2:
+					{
 						std::cout << "Uruchamiam Poziom 3..." << std::endl;
+						Level3 start;
 						break;
+					}
 					case 3:
+					{
 						std::cout << "Uruchamiam Poziom 4..." << std::endl;
+						Level4 start;
 						break;
+					}
 					case 4:
+					{
 						std::cout << "Uruchamiam Poziom 5..." << std::endl;
+						Level5 start;
 						break;
+					}
 					case 5:
 						ChoiceLevelMenuWindow.close();
 						break;

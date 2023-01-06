@@ -144,19 +144,27 @@
   <ItemGroup>
     <ClCompile Include="blok.cpp" />
     <ClCompile Include="ChoiceLevelMenu.cpp" />
+    <ClCompile Include="HelpScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="paletka.cpp" />
+    <ClCompile Include="PauseScreen.cpp" />
     <ClCompile Include="pilka.cpp" />
     <ClCompile Include="GameLevels.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blok.h" />
     <ClInclude Include="ChoiceLevelMenu.h" />
+    <ClInclude Include="HelpScreen.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="paletka.h" />
+    <ClInclude Include="PauseScreen.h" />
     <ClInclude Include="pilka.h" />
     <ClInclude Include="GameLevels.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="arkanoid.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

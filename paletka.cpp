@@ -1,10 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include "paletka.h"
-paletka::paletka(float x_in, float y_in)
+paletka::paletka(float x_in, float y_in, float size_x, float size_y)
 {
 	position.x = x_in;
 	position.y = y_in;
-	rectangle.setSize(sf::Vector2f(120.f, 5.f));
+	rectangle.setSize(sf::Vector2f(size_x, size_y));
 	rectangle.setFillColor(sf::Color::Black);
 	rectangle.setOutlineThickness(1);
 	rectangle.setOutlineColor(sf::Color::White);
