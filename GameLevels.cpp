@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 #include <string>
+#include <Windows.h>
 
 #include "pilka.h"
 #include "paletka.h"
@@ -9,6 +10,8 @@
 #include "GameLevels.h"
 #include "PauseScreen.h"
 #include "HelpScreen.h"
+#include "GameOverScreen.h"
+
 
 bool isCollide(pilka s1, blok s2)
 {
@@ -34,6 +37,7 @@ Level1::Level1()
 	int score = 0;
 	int WhichKeyIsPressed = 0;
 	bool wait = true;
+	int TimeFlag = 0;
 	std::string str = std::to_string(score);
 	int radiusWithOutline = 2 * ((p1.getPilka().getRadius()) + (p1.getPilka().getOutlineThickness()));
 	sf::Font font;
@@ -51,6 +55,8 @@ Level1::Level1()
 
 	PauseScreen loadPauseScreen(PlayGameWindow);
 	HelpScreen loadHelpScreen(PlayGameWindow);
+	GameOverScreen loadGameOverScreen(PlayGameWindow);
+
 
 	blok block[100];
 	int n = 0;
@@ -60,7 +66,7 @@ Level1::Level1()
 			block[n].setPos(i * 50+120, j * 26);
 			n++;
 		}
-
+	
 	while (PlayGameWindow.isOpen())
 	{
 		sf::Event event;
@@ -92,6 +98,7 @@ Level1::Level1()
 					
 					loadPauseScreen.draw(PlayGameWindow);
 					PlayGameWindow.display();
+					WhichKeyIsPressed = 5;
 					break;
 				}
 				case 2:
@@ -99,8 +106,19 @@ Level1::Level1()
 					PlayGameWindow.clear();
 					loadHelpScreen.draw(PlayGameWindow);
 					PlayGameWindow.display();
+					WhichKeyIsPressed = 5;
 					break;
 				}
+				case 0:
+				{
+					loadGameOverScreen.draw(PlayGameWindow);
+					PlayGameWindow.display();
+				}
+				case 3:
+				{
+
+				}
+
 			}
 
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -109,7 +127,7 @@ Level1::Level1()
 			}
 
 
-			if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Backspace)
+			if ((WhichKeyIsPressed == 1 || WhichKeyIsPressed == 2 || WhichKeyIsPressed == 5) && event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Backspace)
 			{
 				wait = true;
 			}
@@ -117,8 +135,9 @@ Level1::Level1()
 		else {
 			if (p1.getPos().x > (PlayGameWindow.getSize().x) - radiusWithOutline || p1.getPos().x < 4) dx = -dx;
 			if (p1.getPos().y > (PlayGameWindow.getSize().y) - radiusWithOutline || p1.getPos().y < 4) dy = -dy;
-			if ((p1.getPos().x > pal1.getPos().x) && (p1.getPos().x < ((pal1.getPos().x) + 120)) && (p1.getPos().y > pal1.getPos().y - 10) && (p1.getPos().y < (pal1.getPos().y) + 5))
+			if ((p1.getPos().x > pal1.getPos().x) && (p1.getPos().x < ((pal1.getPos().x) + pal1.getSize().x)) && (p1.getPos().y > pal1.getPos().y - (p1.getRadius()*2)) && (p1.getPos().y < (pal1.getPos().y) + pal1.getSize().y))
 				dy = -(rand() % 3 + 4);
+			if (p1.getPos().y + radiusWithOutline > pal1.getPos().y + pal1.getSize().y+5) { wait = !wait; WhichKeyIsPressed = 0; }
 
 			p1.przesun(dx, 0);
 			for (int i = 0; i < n; i++)
@@ -157,6 +176,7 @@ Level1::Level1()
 				PlayGameWindow.draw(block[k].getBlok());
 
 			PlayGameWindow.display();
+			if (TimeFlag == 0) { Sleep(1500); TimeFlag = 1; }
 		}
 	}
 }

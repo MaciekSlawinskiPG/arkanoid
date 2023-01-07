@@ -11,5 +11,6 @@ public:
 	void przesun(float x_in, float y_in);
 	sf::RectangleShape getPaletka() { return rectangle; }
 	sf::Vector2f getPos() { return rectangle.getPosition(); }
+	sf::Vector2f getSize() { return rectangle.getSize(); }
 	void setPos(float x_in, float y_in);
 };

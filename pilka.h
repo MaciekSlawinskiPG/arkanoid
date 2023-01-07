@@ -13,6 +13,7 @@ public:
 	void przesun(float x_in, float y_in);
 	sf::CircleShape getPilka() { return ball; }
 	sf::Vector2f getPos() { return ball.getPosition(); }
+	int getRadius() { return ball.getRadius(); }
 	void setPos(float x_in, float y_in);
 };
 
