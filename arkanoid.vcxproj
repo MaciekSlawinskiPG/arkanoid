@@ -148,6 +148,7 @@
     <ClCompile Include="HelpScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="NextLevelScreen.cpp" />
     <ClCompile Include="paletka.cpp" />
     <ClCompile Include="PauseScreen.cpp" />
     <ClCompile Include="pilka.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="GameOverScreen.h" />
     <ClInclude Include="HelpScreen.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="NextLevelScreen.h" />
     <ClInclude Include="paletka.h" />
     <ClInclude Include="PauseScreen.h" />
     <ClInclude Include="pilka.h" />

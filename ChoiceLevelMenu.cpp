@@ -87,6 +87,8 @@ void ChoiceLevelMenu::MoveDown()
 
 void ChoiceLevelMenu::RunChoiceLevelMenu()
 {
+	Level1 level[5];
+	int Scores = 0;
 	sf::ContextSettings settings;
 	sf::RenderWindow ChoiceLevelMenuWindow(sf::VideoMode(800, 600), "Arkanoid game", sf::Style::Default, settings);
 	ChoiceLevelMenuWindow.setFramerateLimit(60);
@@ -121,30 +123,30 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 					case 0:
 					{
 						std::cout << "Uruchamiam Poziom 1..." << std::endl;
-						Level1 start;
+						level[0].RunLevel("blocksPositionLevel1.txt", 100);
 						break;
 					}
 					case 1:
 					{
 						std::cout << "Uruchamiam Poziom 2..." << std::endl;
-						Level2 start;
+						level[1].RunLevel("blocksPositionLevel2.txt", 64);
 						break; }
 					case 2:
 					{
 						std::cout << "Uruchamiam Poziom 3..." << std::endl;
-						Level3 start;
+						level[2].RunLevel("blocksPositionLevel3.txt", 36);
 						break;
 					}
 					case 3:
 					{
 						std::cout << "Uruchamiam Poziom 4..." << std::endl;
-						Level4 start;
+						level[3].RunLevel("blocksPositionLevel4.txt", 16);
 						break;
 					}
 					case 4:
 					{
 						std::cout << "Uruchamiam Poziom 5..." << std::endl;
-						Level5 start;
+						level[4].RunLevel("blocksPositionLevel5.txt", 4);
 						break;
 					}
 					case 5:

@@ -5,6 +5,7 @@
 #include "GameLevels.h"
 #include "ChoiceLevelMenu.h"
 
+int allScores;
 int main()
 {
 	sf::ContextSettings settings;
@@ -13,6 +14,7 @@ int main()
 
 	menu menu(MainWindow.getSize().x, MainWindow.getSize().y);
 	ChoiceLevelMenu LevelMenu(MainWindow.getSize().x, MainWindow.getSize().y);
+
 
 	while (MainWindow.isOpen())
 	{
@@ -42,8 +44,8 @@ int main()
 					case 0:
 					{
 						LevelMenu.RunChoiceLevelMenu();
-						break; 
-					}	
+						break;
+					}
 					case 1:
 						std::cout << "Uruchamiam ranking graczy..." << std::endl;
 						break;
@@ -58,5 +60,6 @@ int main()
 		menu.draw(MainWindow);
 		MainWindow.display();
 	}
+//	std::cout << "ostateczna liczba punktow to: " << allScores << std::endl;
 	return 0;
 }

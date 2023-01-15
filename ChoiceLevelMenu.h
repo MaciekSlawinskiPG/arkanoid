@@ -16,6 +16,7 @@ public:
 	void MoveUp();
 	void MoveDown();
 	int GetSelectedItemIndex() { return selectedItemIndex; }
+	void SetSelectedItemIndex(int x) { selectedItemIndex = x; }
 	void RunChoiceLevelMenu();
 
 };
