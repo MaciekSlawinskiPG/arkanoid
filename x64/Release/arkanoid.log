@@ -6,13 +6,16 @@ C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\HelpScreen.h(3): message : zobacz poprzednią definicję „MAX_NUMBER_OF_SLOTS”
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\NextLevelScreen.h(3,1): warning C4005: "MAX_NUMBER_OF_SLOTS": ponowna definicja makra
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameOverScreen.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_SLOTS”
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(49,24): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(87,26): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(87,19): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(173,15): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(186,18): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(60,25): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(68,24): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(106,26): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(106,19): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(210,15): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(223,18): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(238,64): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   Trwa generowanie kodu
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 299 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  1 of 303 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   arkanoid.vcxproj -> C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\x64\Release\arkanoid.exe

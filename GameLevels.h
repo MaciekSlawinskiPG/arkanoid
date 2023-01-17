@@ -11,27 +11,8 @@ class Level1
 private:
 	int testScores = 0;
 public:
-	void RunLevel(std::string nameOfFile, int blocks);
+	void RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int paletkaWidth);
 	void SetTestScores(int scores);
+	void RunNextLevel(int level, int nextLevel, Level1 tablica[]);
 	int GetTestScores() { return testScores; }
 };
-
-//class Level2
-//{
-//public: Level2();
-//};
-//
-//class Level3
-//{
-//public: Level3();
-//};
-//
-//class Level4
-//{
-//public: Level4();
-//};
-//
-//class Level5
-//{
-//public: Level5();
-//};

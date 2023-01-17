@@ -147,6 +147,7 @@
     <ClCompile Include="GameOverScreen.cpp" />
     <ClCompile Include="HelpScreen.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="NextLevelScreen.cpp" />
     <ClCompile Include="paletka.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="ChoiceLevelMenu.h" />
     <ClInclude Include="GameOverScreen.h" />
     <ClInclude Include="HelpScreen.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="NextLevelScreen.h" />
     <ClInclude Include="paletka.h" />

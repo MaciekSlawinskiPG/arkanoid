@@ -93,6 +93,11 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 	sf::RenderWindow ChoiceLevelMenuWindow(sf::VideoMode(800, 600), "Arkanoid game", sf::Style::Default, settings);
 	ChoiceLevelMenuWindow.setFramerateLimit(60);
 
+	sf::Texture texture;
+	texture.loadFromFile("background.jpg");
+	sf::Sprite backgroundImage;
+	backgroundImage.setTexture(texture);
+
 	ChoiceLevelMenu LevelMenu(ChoiceLevelMenuWindow.getSize().x, ChoiceLevelMenuWindow.getSize().y);
 
 	while (ChoiceLevelMenuWindow.isOpen())
@@ -123,30 +128,30 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 					case 0:
 					{
 						std::cout << "Uruchamiam Poziom 1..." << std::endl;
-						level[0].RunLevel("blocksPositionLevel1.txt", 100);
+						level[0].RunLevel("blocksPositionLevel1.txt", 100, level, 120);
 						break;
 					}
 					case 1:
 					{
 						std::cout << "Uruchamiam Poziom 2..." << std::endl;
-						level[1].RunLevel("blocksPositionLevel2.txt", 64);
+						level[1].RunLevel("blocksPositionLevel2.txt", 64, level, 100);
 						break; }
 					case 2:
 					{
 						std::cout << "Uruchamiam Poziom 3..." << std::endl;
-						level[2].RunLevel("blocksPositionLevel3.txt", 36);
+						level[2].RunLevel("blocksPositionLevel3.txt", 36, level, 80);
 						break;
 					}
 					case 3:
 					{
 						std::cout << "Uruchamiam Poziom 4..." << std::endl;
-						level[3].RunLevel("blocksPositionLevel4.txt", 16);
+						level[3].RunLevel("blocksPositionLevel4.txt", 16, level, 60);
 						break;
 					}
 					case 4:
 					{
 						std::cout << "Uruchamiam Poziom 5..." << std::endl;
-						level[4].RunLevel("blocksPositionLevel5.txt", 4);
+						level[4].RunLevel("blocksPositionLevel5.txt", 4, level, 40);
 						break;
 					}
 					case 5:
@@ -157,6 +162,7 @@ void ChoiceLevelMenu::RunChoiceLevelMenu()
 			}
 		}
 		ChoiceLevelMenuWindow.clear();
+		ChoiceLevelMenuWindow.draw(backgroundImage);
 		LevelMenu.draw(ChoiceLevelMenuWindow);
 		ChoiceLevelMenuWindow.display();
 	}
