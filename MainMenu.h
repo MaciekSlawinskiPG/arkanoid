@@ -6,6 +6,8 @@
 #include "menu.h"
 #include "GameLevels.h"
 #include "ChoiceLevelMenu.h"
+#include "RankingScreen.h"
+
 
 class MainMenu
 {

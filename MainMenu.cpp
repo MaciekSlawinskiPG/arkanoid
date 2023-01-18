@@ -13,6 +13,7 @@ MainMenu::MainMenu()
 
 	menu menu(MainWindow.getSize().x, MainWindow.getSize().y);
 	ChoiceLevelMenu LevelMenu(MainWindow.getSize().x, MainWindow.getSize().y);
+	RankingScreen rankingScreen(MainWindow.getSize().x, MainWindow.getSize().y);
 
 
 	while (MainWindow.isOpen())
@@ -46,7 +47,8 @@ MainMenu::MainMenu()
 						break;
 					}
 					case 1:
-						std::cout << "Uruchamiam ranking graczy..." << std::endl;
+						std::cout << std::endl << "Uruchamiam historie wynikow..." << std::endl;
+						rankingScreen.RunRankingScreen();
 						break;
 					case 2:
 						MainWindow.close();

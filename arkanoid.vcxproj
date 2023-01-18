@@ -154,6 +154,7 @@
     <ClCompile Include="PauseScreen.cpp" />
     <ClCompile Include="pilka.cpp" />
     <ClCompile Include="GameLevels.cpp" />
+    <ClCompile Include="RankingScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blok.h" />
@@ -167,6 +168,7 @@
     <ClInclude Include="PauseScreen.h" />
     <ClInclude Include="pilka.h" />
     <ClInclude Include="GameLevels.h" />
+    <ClInclude Include="RankingScreen.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

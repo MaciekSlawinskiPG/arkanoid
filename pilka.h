@@ -16,4 +16,3 @@ public:
 	int getRadius() { return ball.getRadius(); }
 	void setPos(float x_in, float y_in);
 };
-

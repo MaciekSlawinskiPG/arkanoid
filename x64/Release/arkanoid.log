@@ -1,4 +1,57 @@
-﻿  GameLevels.cpp
+﻿  blok.cpp
+  ChoiceLevelMenu.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\pilka.h(16,41): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\ChoiceLevelMenu.cpp(101,94): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\ChoiceLevelMenu.cpp(101,59): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  main.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\pilka.h(16,41): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\ChoiceLevelMenu.h(5,1): warning C4005: "NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\menu.h(4): message : zobacz poprzednią definicję „NUMBER_OF_ITEMS”
+  MainMenu.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\pilka.h(16,41): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\ChoiceLevelMenu.h(5,1): warning C4005: "NUMBER_OF_ITEMS": ponowna definicja makra
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\menu.h(4): message : zobacz poprzednią definicję „NUMBER_OF_ITEMS”
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\MainMenu.cpp(14,56): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\MainMenu.cpp(14,32): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\MainMenu.cpp(15,72): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\MainMenu.cpp(15,48): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\MainMenu.cpp(16,74): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\MainMenu.cpp(16,50): warning C4244: "argument": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  pilka.cpp
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\pilka.h(16,41): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
+  GameLevels.cpp
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\pilka.h(16,41): warning C4244: "return": konwersja z "float" do "int", możliwa utrata danych
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\HelpScreen.h(3,1): warning C4005: "MAX_NUMBER_OF_SLOTS": ponowna definicja makra
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\PauseScreen.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_SLOTS”
@@ -6,16 +59,16 @@ C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\HelpScreen.h(3): message : zobacz poprzednią definicję „MAX_NUMBER_OF_SLOTS”
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\NextLevelScreen.h(3,1): warning C4005: "MAX_NUMBER_OF_SLOTS": ponowna definicja makra
 C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameOverScreen.h(4): message : zobacz poprzednią definicję „MAX_NUMBER_OF_SLOTS”
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(60,25): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(68,24): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(106,26): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(106,19): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(210,15): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(223,18): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(238,64): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(78,25): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(86,24): warning C4244: "inicjowanie": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(124,26): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(124,19): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(237,15): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(250,18): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\arkanoid\GameLevels.cpp(265,64): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   Trwa generowanie kodu
-  1 of 303 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+  0 of 323 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   arkanoid.vcxproj -> C:\Users\macie\OneDrive\Pulpit\STUDIA\SEMESTR 3\INFORMATYKA II\arkanoid\x64\Release\arkanoid.exe

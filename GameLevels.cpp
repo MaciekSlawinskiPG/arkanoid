@@ -1,3 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <time.h>
+#include <conio.h>
 #include <iostream>
 #include <fstream>
 #include <SFML/Graphics.hpp>
@@ -14,7 +17,7 @@
 #include "GameOverScreen.h"
 #include "NextLevelScreen.h"
 
-#define MAX_POINTS_IN_ROUND 4
+#define MAX_POINTS_IN_ROUND 2
 
 bool isCollide(pilka s1, blok s2)
 {
@@ -27,11 +30,26 @@ bool isCollide(pilka s1, blok s2)
 		return false; 
 	}
 }
-
-void Level1::SetTestScores(int scores)
+void SaveToFile(int allScores)
 {
-	testScores = scores;
+	time_t czas;
+	struct tm* data;
+	char godzina[80];
+
+	time(&czas);
+	data = localtime(&czas);
+
+	strftime(godzina, 80, "%H:%M:%S", data);
+
+	std::fstream file;
+	file.open("PreviousScores.txt", std::ios::app);
+	file << godzina << "        " << allScores << std::endl;
+	file.close();
 }
+//void Level1::SetTestScores(int scores)
+//{
+//	testScores = scores;
+//}
 
 void Level1::RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int paletkaWidth)
 {
@@ -42,7 +60,7 @@ void Level1::RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int 
 	case 64: {levelID = 2; break; }
 	case 36: {levelID = 3; break; }
 	case 16: {levelID = 4; break; }
-	case 4: {levelID = 5; break; }
+	case 6: {levelID = 5; break; }
 	}
 
 
@@ -165,6 +183,7 @@ void Level1::RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int 
 					for (int k = 0; k < n; k++) PlayGameWindow.draw(block[k].getBlok());
 					loadGameOverScreen.draw(PlayGameWindow);
 					PlayGameWindow.display();
+					
 					break;
 				}
 				case 3: // Next level screen
@@ -193,10 +212,10 @@ void Level1::RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int 
 				
 				switch (levelID)
 				{
-				case 1: {tablica[1].RunLevel("blocksPositionLevel2.txt", 64, tablica, 100); break; }
-				case 2: {tablica[2].RunLevel("blocksPositionLevel3.txt", 36, tablica, 80); break; }
-				case 3: {tablica[3].RunLevel("blocksPositionLevel4.txt", 16, tablica, 60); break; }
-				case 4: {tablica[4].RunLevel("blocksPositionLevel5.txt", 4, tablica, 40); break; }
+				case 1: {std::cout << "Uruchamian Poziom 2..." << std::endl; tablica[1].RunLevel("blocksPositionLevel2.txt", 64, tablica, 200); break; }
+				case 2: {std::cout << "Uruchamian Poziom 3..." << std::endl; tablica[2].RunLevel("blocksPositionLevel3.txt", 36, tablica, 200); break; }
+				case 3: {std::cout << "Uruchamian Poziom 4..." << std::endl; tablica[3].RunLevel("blocksPositionLevel4.txt", 16, tablica, 200); break; }
+				case 4: {std::cout << "Uruchamian Poziom 5..." << std::endl; tablica[4].RunLevel("blocksPositionLevel5.txt", 6, tablica, 200); break; }
 				}
 			}
 		}
@@ -205,7 +224,15 @@ void Level1::RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int 
 			if (p1.getPos().y > (PlayGameWindow.getSize().y) - radiusWithOutline || p1.getPos().y < 4) dy = -dy;
 			if ((p1.getPos().x > pal1.getPos().x) && (p1.getPos().x < ((pal1.getPos().x) + pal1.getSize().x)) && (p1.getPos().y > pal1.getPos().y - (p1.getRadius()*2)) && (p1.getPos().y < (pal1.getPos().y) + pal1.getSize().y))
 				dy = -(rand() % 3 + 4);
-			if (p1.getPos().y + radiusWithOutline > pal1.getPos().y + pal1.getSize().y+5) { wait = !wait; WhichKeyIsPressed = 0; }
+			if (p1.getPos().y + radiusWithOutline > pal1.getPos().y + pal1.getSize().y+5) 
+			{ 
+				wait = !wait; 
+				WhichKeyIsPressed = 0; 
+				tablica[levelID - 1].SetTestScores(score);
+				std::cout << "- - - - -" << std::endl << "Level 1: " << tablica[0].GetTestScores() << std::endl << "Level 2: " << tablica[1].GetTestScores() << std::endl << "Level 3: " << tablica[2].GetTestScores() << std::endl << "Level 4: " << tablica[3].GetTestScores() << std::endl << "Level 5: " << tablica[4].GetTestScores() << std::endl << "- - - - -" << std::endl;
+				std::cout << std::endl << std::endl << "- - - - -" << std::endl << "Laczna ilosc punktow to: " << tablica[0].GetTestScores() + tablica[1].GetTestScores() + tablica[2].GetTestScores() + tablica[3].GetTestScores() + tablica[4].GetTestScores();
+				SaveToFile(tablica[0].GetTestScores() + tablica[1].GetTestScores() + tablica[2].GetTestScores() + tablica[3].GetTestScores() + tablica[4].GetTestScores());
+			}
 
 			p1.przesun(dx, 0);
 			for (int i = 0; i < n; i++)
@@ -238,12 +265,18 @@ void Level1::RunLevel(std::string nameOfFile, int blocks, Level1 tablica[], int 
 			if (pal1.getPos().x > 800 - paletkaWidth) { pal1.setPos(800 - paletkaWidth, 560); }
 
 
-			if (score == MAX_POINTS_IN_ROUND)
+			if (score == levelID)
 			{
 				PlayGameWindow.draw(scores);
 				wait = !wait;
 				event.key.code = sf::Keyboard::Q;
 				WhichKeyIsPressed = 3;
+				tablica[levelID-1].SetTestScores(score);
+				if (levelID == 5)
+				{
+					std::cout << "- - - - -" << std::endl << "Level 1: " << tablica[0].GetTestScores() << std::endl << "Level 2: " << tablica[1].GetTestScores() << std::endl << "Level 3: " << tablica[2].GetTestScores() << std::endl << "Level 4: " << tablica[3].GetTestScores() << std::endl << "Level 5: " << tablica[4].GetTestScores() << std::endl << "- - - - -" << std::endl;
+					std::cout << std::endl << std::endl << "- - - - -" << std::endl << "Laczna ilosc punktow to: " << tablica[0].GetTestScores() + tablica[1].GetTestScores() + tablica[2].GetTestScores() + tablica[3].GetTestScores() + tablica[4].GetTestScores() << std::endl;
+				}
 
 			}
 
